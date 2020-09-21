@@ -13,3 +13,9 @@ variable "dbpass" {
 variable "dbname" {
     default = "mysqldb"
 }
+variable "username" {
+  default = "admin"
+}
+variable "password" {
+    default = "@akhileshjain9221@"
+}
