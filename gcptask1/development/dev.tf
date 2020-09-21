@@ -81,9 +81,7 @@ resource "null_resource" "local1"  {
 depends_on=[google_container_cluster.gkecluster] 
 provisioner "local-exec" {
   command = "gcloud container clusters get-credentials 
-  ${google_container_cluster.gkecluster.name}
-   --zone ${google_container_cluster.gkecluster.location}  
-   --project ${google_container_cluster.gkecluster.project}"
+  ${google_container_cluster.gkecluster.name} --zone ${google_container_cluster.gkecluster.location} --project ${google_container_cluster.gkecluster.project}"
    }
 }
 
